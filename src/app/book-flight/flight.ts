@@ -1,9 +1,10 @@
 export class Flight {
   constructor(
     public id: number,
-    public name: string,
-    public power: string,
-    public alterEgo?: string
+    public airport: string,
+    public destination: string,
+    public numberOfPassengers?: number,
+    public date?: Date
   ) {
     // const myHero =  new Hero(42, 'SkyDog',
     //   'Fetch any object at any distance',

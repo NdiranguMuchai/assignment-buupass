@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Flight} from './flight';
+import {HomeDetailsComponent} from '../home-details/home-details.component';
+import {MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-book-flight',
@@ -7,18 +9,21 @@ import {Flight} from './flight';
   styleUrls: ['./book-flight.component.css']
 })
 export class BookFlightComponent implements OnInit {
-  powers = ['Really Smart', 'Super Flexible',
-    'Super Hot', 'Weather Changer'];
+  destinations = ['Seoul', 'Dubai',
+    'Berlin', 'Istanbul'];
 
-  model = new Flight(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  airports = ['Nairobi', 'Kisumu',
+    'Mombasa', 'Eldoret'];
+
+  model = new Flight(18, this.airports[0], this.destinations[0], 1, new Date() );
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
   get diagnostic() { return JSON.stringify(this.model); }
   constructor() { }
-  newHero() {
-    this.model = new Flight(42, '', '');
+  blankForm() {
+    this.model = new Flight(42, '', '', 0, new Date());
   }
 
   ngOnInit() {
