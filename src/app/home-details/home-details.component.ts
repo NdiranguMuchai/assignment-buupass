@@ -17,7 +17,6 @@ export class HomeDetailsComponent implements OnInit {
     console.log('book flight');
     const d = this.dialog.open(BookFlightComponent, {
       width: '800px',
-      // data: {user: this.user}
     });
   }
 }

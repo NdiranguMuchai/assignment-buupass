@@ -42,23 +42,23 @@
     </form>
   </div>
   <div [hidden]="!submitted">
-    <h2>Your flight details are:</h2>
+    <h2>Flight details:</h2>
 
     <div class="row">
-      <div class="col-xs-9">From:  {{ model.airport }}</div>
+      <div class="col-xs-9"><b>From:</b>  {{ model.airport }}</div>
     </div>
 
 
     <div class="row">
-      <div class="col-xs-9">To:  {{ model.destination }}</div>
+      <div class="col-xs-9"> <b>To:</b>  {{ model.destination }}</div>
     </div>
 
     <div class="row">
-      <div class="col-xs-9">seats: {{ model.numberOfPassengers }}</div>
+      <div class="col-xs-9"> <b>Seats:</b> {{ model.numberOfPassengers }}</div>
     </div>
 
     <div class="row">
-      <div class="col-xs-9">Departure:  {{ model.date }}</div>
+      <div class="col-xs-9"> <b>Departure:</b> {{ model.date }}</div>
     </div>
 
     <br>
